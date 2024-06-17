@@ -1,0 +1,144 @@
+.header{
+    padding: 0 0 30px 0 ;
+    position: sticky;
+    left: 0 ;
+    top: 0;
+    z-index: 10;
+    &__navbar{
+        width: 100%;
+        padding: 40px;
+        backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    &__left{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+    &__btn{
+        display: flex;
+        width: 80px;
+        padding: 8px 5px;
+        gap: 4px;
+        background-color: black;
+        color: white;
+        border: none;
+    }
+    &__input{
+        width: 70%;
+        display: flex;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.2);
+        justify-content: space-between;
+        border: none;
+        border-radius: 4px;
+        padding: 8px 3%;
+        color: white;
+        input{
+            width: 100%;
+            border: none;
+            outline: none;
+        background-color:transparent;
+        &::placeholder{
+            color: white;
+        }
+
+        }
+    }
+    .dropdown{
+        background-color: gray  ;
+        position: relative;
+        z-index: 99;
+        span{
+            background-color: gray;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+      .drop{
+        top: 36px;
+        left: 0;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        opacity: 0;
+        transition: all 1s;
+        z-index: -1;
+        button{
+            display: flex;
+            width: 80px;
+            padding: 8px 5px;
+            gap: 4px;
+            background-color: rgba(0, 0, 0, 0.221);
+            color: rgb(0, 0, 0);
+            border: none;
+        }
+      }
+    }
+    .dropdown.toggle{
+        .drop{
+            opacity: 1;
+        }
+    }
+
+    &__right{
+        display: none;
+    }
+}
+
+@media (min-width:567px) {
+    .header{
+        .dropdown{
+            .drop{
+                display: none;
+            }
+
+        }
+        &__left{
+            width: 50%;
+            
+        }
+        &__btn{
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        &__input{
+            background-color: rgba(0, 0, 0, 0.2);
+            input{
+                background-color:transparent;
+                &::placeholder{
+                    color: white;
+                }
+            }
+
+        }
+
+        &__right{
+            display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 15px;
+                span{
+                    font-size: 22px;
+                    color: white;
+                    padding: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: rgba(0, 0, 0, 0.208);
+                }
+                button{
+                    display: flex;
+                    width: 80px;
+                    padding: 8px 5px;
+                    gap: 4px;
+                    background-color: rgba(0, 0, 0, 0.221);
+                    color: rgb(255, 255, 255);
+                    border-radius: 4px;
+                    border: none;
+                }
+            }
+        }
+    }
+    

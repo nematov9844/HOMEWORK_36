@@ -1,0 +1,129 @@
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 40px;
+    &__main{
+       display: flex;
+       flex-direction: column;
+       position: relative;
+       z-index: -5;
+       align-items: center;
+       padding: 20px;
+
+    }
+    &__main__left{
+       width: 100%;
+       display: flex;
+       padding: 100px 0px;
+       flex-direction: column;
+       gap: 20px;
+       background: transparent;
+
+    }
+    &__main__title{
+        font-size: 45px;
+    }
+    &__main__btn{
+        width: 145px;
+        height: 50px;
+        border: 2px solid rgba(251, 208, 41, 1);
+        border-radius: 10px;
+    }
+    &__main__img{
+        width: 80%;
+        z-index: -1;
+        height: 100%;
+    }
+    &__img__1{
+
+        width: 100%;
+        top: 0;
+        height: 100%;
+        right: 0;
+        z-index: -1;
+        background-color: rgb(142, 220, 26);
+        border-radius:0%;
+    }
+    &__cards{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        height: 100%;
+    }
+    &__card{
+        display: flex;
+        padding: 15px;
+        width: 100%;
+        height: auto;
+        max-height: 240px;
+        // min-width: 330px;
+        min-height: 200px;
+        overflow: hidden;
+    }
+    &__card__left{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 50%;
+    }
+    &__card__img{
+        width: 50%;
+        position: relative;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+        span{
+            position: absolute;
+            bottom: 1%;
+            right: -60px;
+            background-color: red;
+            color: black;
+            width: 200px;
+            height: 45px;
+            font-size: 24px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+
+@media (min-width:992px) {
+   .hero{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    &__main{
+        display: flex;
+        flex-direction: row;
+    }
+    &__main__title{
+        font-size: 45px;
+    }
+    &__main__img{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &__img__1{
+        width: 100%;
+        object-fit: cover;
+    }
+    &__cards{
+        width: 30%;
+    }
+    &__card{
+        max-width: 400px;
+    }
+   }   
+}

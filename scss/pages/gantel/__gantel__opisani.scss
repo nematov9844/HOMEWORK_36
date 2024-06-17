@@ -1,0 +1,120 @@
+.gantel__opisani{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    p,h6,h5{
+        font-size: 20px;
+    }
+    h5{
+        font-weight: 300;
+    }
+    h6{
+        font-weight: 500;
+    }
+    h2{
+        font-size: 32px;
+    }
+    h4,h3{
+        font-size: 25px;
+    }
+    &__top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__title{
+        width: 50%;
+    }
+    &__all{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    &__left{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+        justify-content: space-between;
+    }
+    &__left__bottom{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    &__left__boottom__left{
+        width: 100%;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__right{
+        padding: 20px;
+    }
+    &__right__all{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    &__right__card{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        img{
+            width: 180px;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .gantel__opisani{
+        &__all{
+            display: flex;
+            flex-direction: column;
+        }
+
+    }   
+}
+
+
+
+
+
+.market{
+    display: flex;
+    padding: 0px 300px;
+    &__all{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__card{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        background-color: rgb(243, 243, 243);
+        h1{
+            font-size: 30px;
+        }
+        p{
+            font-size: 18px;
+            text-align: justify;
+        }
+    }
+    &__card__bottom{
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        gap: 10px;
+        p{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+}
